@@ -16,3 +16,17 @@ string s4(n,'c');
 3.string对象上的操作
   getline(ls,s) //从ls中读取一行赋给s,返回ls
   s.empty(); s.size(); s[n]返回s中第n个字符; s1+s2;
+  s.size()返回的是无符号数,注意无符号数和有符号数的混用会出问题.
+4.比较string对象
+  按照字典顺序.
+  1.两个string长度不同,较短的string对象的每个字符和较长的string对象的对应位置上的字符相同.较短的string对象小于较长的string对象.
+  2.对应位置上的字符不同,比较的结果是第一队互异的字符比较的结果.
+5.两个string对象相加
+  得到一个新的string对象.
+6.字面值和string对象相加
+  必须保证+的两侧的运算对象至少有一个是string
+  string s3="hello"+",";//错误
+  string s4="hello"+", "+s2;//错误
+  string s6=s1+","+"word";//对
+！字符串字面值与string是不同类型.
+！string类的输入运算符不会输入空白字符、getline会输入空白字符.
