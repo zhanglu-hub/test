@@ -1,0 +1,18 @@
+1.命名空间using声明
+using namespace::name;
+using std::cin;
+using namespace std;
+头文件不应包含using声明
+2.标准库类型string
+string表示可变长的字符序列,使用string类型必须首先包含string头文件
+string s1;
+string s2(s1);
+string s2=s1;
+string s3("value");
+string s3="value";
+string s4(n,'c');
+= 拷贝初始化
+不使用= 直接初始化
+3.string对象上的操作
+  getline(ls,s) //从ls中读取一行赋给s,返回ls
+  s.empty(); s.size(); s[n]返回s中第n个字符; s1+s2;
