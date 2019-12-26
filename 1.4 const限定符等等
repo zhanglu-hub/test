@@ -72,6 +72,11 @@
   decltype((i)) d;//错误,decltype的表达式如果是加上了括号的变量,结果将是引用.
   ！decltype(())双层括号的结果永远是引用
   ！decltype(val)只有内部val是引用时才是引用
+10.decltype 和 auto 
+  decltype和auto对const的处理不同,auto会自动忽略顶层const
+  const int i=0;
+  auto x=i; //x是int 
+  decltype(i) x=0; //x是const int
   
   
     
