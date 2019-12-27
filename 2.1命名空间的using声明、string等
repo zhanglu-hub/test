@@ -37,6 +37,7 @@ string s4(n,'c');
   isxdigit(c) c是十六进制数字时为真
   tolower(c) 将c变为小写字母
   toupper(c) 将c变为大写字母
+  ispunct(c) 判断字符是否是标点符号
 8.处理每个字符？基于范围的for语句
   C++11新标准提供的一种语句：范围for(range for)语句
   for(auto c: str)
