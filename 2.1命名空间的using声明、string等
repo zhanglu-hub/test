@@ -30,3 +30,21 @@ string s4(n,'c');
   string s6=s1+","+"word";//对
 ！字符串字面值与string是不同类型.
 ！string类的输入运算符不会输入空白字符、getline会输入空白字符.
+7.处理string对象中的字符
+  cctype头文件:
+  islower(c) c是小写字母时为真
+  isupper(c) c是大写字母时为真
+  isxdigit(c) c是十六进制数字时为真
+  tolower(c) 将c变为小写字母
+  toupper(c) 将c变为大写字母
+8.处理每个字符？基于范围的for语句
+  C++11新标准提供的一种语句：范围for(range for)语句
+  for(auto c: str)
+    cout<<c<<endl;
+   改变字符串中的字符
+   string s("Hello World!!!");
+   for(auto &c:s) //c是一个引用
+    c=toupper(c);
+   cout<<s<<endl;
+  ！逻辑与运算符 && C++语言规定只有当左侧运算对象为真时,才会检查右侧运算对象的情况.
+  如果下标n是string::size_type类型,n可以确保大于或等于0.
