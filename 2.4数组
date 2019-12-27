@@ -1,0 +1,28 @@
+数组是一种类似于标准库类型vector的数据结构.
+数组大小去顶不变,不能随意向数组中增加元素
+1.定义和初始化内置数组
+  int arr[10];
+  int arr[x]; //x需要是常量表达式 constexpr int x;
+  string strs[get_size()] //当get_size是constexpr时正确.
+  默认情况下,数组的元素被默认初始化.含有未定义的值.
+  (1)显式初始化数组元素
+  (2) const char a4[6]="Daniel"; //错误,没有空间存放空字符.
+  (3) 不允许拷贝和赋值
+  int a[]={2,1,0};
+  int a2[]=a; //错误
+  a2=a;     //错误
+2.指针和数组
+  使用数组的时候编译器一般会把它转换成指针
+  数组特性,在用到数组名字的地方,编译器会自动地将其替换为一个指向数组首元素的指针.
+  string *p=&nums[0];
+  string *p2=nums; //等价于p2=&nums[0]; p2时int*
+  auto ia2(&ia[0]) //ia2是整型指针
+  decltype(ia) ia3={1,5,6};//ia3时int[]类型,大小和ia一样.
+  C++11引入两个名为begin和end的函数,在数组中用.
+  int ia[]={0,1,2,3,4,5,6,7,8,9};
+  int* beg=begin(ia); //指向ia首元素的指针
+  int* last=end(ia); //指向ia尾元素的下一位置的指针
+  例：
+  int *p=&ia[2];
+  int j=p[1];
+  int k=p[-2]; //p[-2]是ia[0]表示的那个元素
