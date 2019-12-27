@@ -1,0 +1,31 @@
+类似于指针类型,迭代器也提供了对对象的间接访问.
+有效的迭代器或者指向某个元素,或者指向容器中尾元素的下一位置;
+其他情况都属于无效.
+1.使用迭代器
+  获取迭代器不是使用取地址符,和指针不一样.
+  begin成员负责返回指向第一个元素的迭代器.
+  end成员负责返回指向容器“尾元素的下一位置”的迭代器.
+  end成员返回的迭代器常被称为尾后迭代器.
+  特殊情况,如果容器为空,则begin和end返回的是同一个迭代器.
+  常用auto关键字定义,不关心迭代器的准确类型是什么.
+2.迭代器运算符
+  *iter 返回迭代器iter所指元素的引用
+  iter->mem 解引用iter并获得该元素的名为mem的成员,相当于(*iter).mem ()不可省略
+  ++iter;
+  --iter;
+  iter1==iter2;
+  iter1!=iter2;
+3.迭代器类型
+  const_iterator表示迭代器的类型
+  常量vector对象只能使用const_iterator
+  不是常量vector对象既能使用iterator也能使用const_iterator
+  C++11新标准引入了两个新函数,分别是cbegin和cend
+  v.cbegin()返回第一个元素的const_iterator
+  v.cend()返回最后一个元素下一个位置的const_iterator
+4.箭头运算符把解引用和成员访问操作结合在一起
+5.push_back会使vector对象的迭代器失效
+6.迭代器运算
+  iter+n
+  iter-n
+  iter1-iter2
+  
