@@ -1,0 +1,9 @@
+strlen(p) 返回p的长度,空字符不计算在内
+strcmp(p1,p2) 比较p1和p2的相等性,p1==p2返回0,p1>p2 返回一个正值 p1<p2 返回一个负值.
+strcat(p1,p2) 将p2附加到p1之后,返回p1
+strcpy(p1,p2) 将p2拷贝给p1,返回p1
+传入上述函数的指针必须指向以空字符作为结束的数组.
+const char ca1[] = "A string example";
+const char ca2[]="A different string";
+if(ca1<ca2) //未定义：试图比较两个无关地址.
+！！使用标准库string要比使用C风格字符串更安全、更高效.
